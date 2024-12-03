@@ -1,0 +1,168 @@
+/* Umum untuk body */
+body {
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1b1b1b; /* Hitam untuk latar belakang umum */
+    color: white; /* Teks putih untuk kontras yang lebih baik */
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #000000, #333333); /* Gelap dengan sedikit abu-abu */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed; 
+    top: 0;       
+    left: 0;       
+    width: 100%;    
+    z-index: 1000;  
+}
+
+/* Logo */
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Nama Restoran */
+.nama-restoran {
+    color: gold; /* Warna emas untuk nama restoran */
+    font-size: 24px;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+/* Navigation */
+.custom-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.custom-nav-item {
+    margin-right: 20px;
+}
+
+.custom-nav-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.custom-nav-link:hover {
+    color: gold; /* Menyala dengan warna emas saat hover */
+}
+
+.custom-nav-link.active {
+    color: gold;
+}
+
+/* Main Menu Section */
+.main-menu {
+    padding: 100px 20px 20px; /* Menambahkan padding atas untuk memberi jarak dengan header */
+    text-align: center;
+    flex: 1;
+    background: #333333; /* Latar belakang gelap */
+    color: gold; /* Warna teks emas */
+}
+
+.main-menu h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.main-menu p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Memberi jarak antar item */
+}
+
+/* Menu Item */
+.menu-item {
+    background-color: #2c2c2c; /* Gelap untuk latar belakang menu item */
+    color: white; /* Teks putih pada menu item */
+    border: 1px solid #444; /* Batas tipis gelap */
+    border-radius: 10px; /* Rounding pada sudut menu item */
+    padding: 15px;
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 30px); /* Responsif: 3 item per baris */
+    transition: transform 0.3s ease-in-out; /* Animasi saat hover */
+    margin-bottom: 20px; /* Menambahkan margin bawah pada tiap item */
+}
+
+.menu-item:hover {
+    transform: translateY(-10px); /* Efek hover agar item terangkat sedikit */
+}
+
+.menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Agar gambar tetap proporsional */
+    border-radius: 10px; /* Rounding pada gambar */
+}
+
+.menu-item h3 {
+    color: gold; /* Warna emas untuk judul menu */
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.menu-item p {
+    color: #bbb; /* Warna abu-abu pada deskripsi menu */
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Latar belakang footer gelap */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+/* Miscellaneous */
+footer {
+    background-color: #1b1b1b; /* Footer hitam */
+}
+
+/* Responsif: Mengubah layout menu-item pada layar kecil */
+@media screen and (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 30px); /* 2 item per baris pada layar lebih kecil */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-item {
+        flex: 1 1 100%; /* 1 item per baris pada layar kecil */
+    }
+}
